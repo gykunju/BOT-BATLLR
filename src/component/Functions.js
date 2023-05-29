@@ -32,11 +32,17 @@ function Functions() {
       method:'DELETE'
     })
     .then(()=>{setBots(remainingBots)})
-  
-   }
+  }
+
   return (
     <div>
-       <BotArmy army={army} removeArmy={removeArmy}/>
+      {army.length <= 0 ?(
+        <div style={{border:"solid", padding:"0px", width:"100px", display:"flex", justifyContent:"center", marginLeft:"600px"}}>
+        <h3 style={{textDecoration:"underline"}}>ADD YOUR BOT ARMY<br></br><small>here...</small></h3>
+        </div>
+      ):(
+        <BotArmy army={army} removeArmy={removeArmy}/>
+      )}
        <BotCard bots={bots} addBotArmy={addBotArmy} handleDelete={deleteBot}/>
     </div>
   )

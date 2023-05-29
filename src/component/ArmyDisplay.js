@@ -22,15 +22,15 @@ function ArmyDisplay({id, image, name, catchphrase, health, damage, armor, remov
         <div style={{display:"flex", flexDirection:"column"}}>
             <span style={{color:"green"}}>
               <i className=''/>
-              HEALTH:{health}
+              <b><small>HEALTH:{health}</small></b>
             </span>
-            <span style={{color:"#ff0000 "}}>
+            <span style={{color:"#960018"}}>
               <i className=''/>
-              DAMAGE:{damage}
+              <b><small>DAMAGE:{damage}</small></b>
             </span>
             <span style={{color:"blue"}}>
               <i className=''/>
-              <b>ARMOR:{armor}</b>
+              <b><small>ARMOR:{armor}</small></b>
             </span>
         </div>
         <div>
